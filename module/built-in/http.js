@@ -5,6 +5,16 @@
 const http = require("node:http");
 
 // Create a local server to receive data from
+
+// Text Format
+// //JSON format
+// const server = http.createServer((req, res) => {
+//   res.writeHead(200, { "Content-Type": "text/plain" });
+//   res.end(`{ "name" : "Abi" }` )
+//     });
+
+
+//JSON format
 const server = http.createServer((req, res) => {
   res.writeHead(200, { "Content-Type": "application/json" });
   res.end(
@@ -14,5 +24,9 @@ const server = http.createServer((req, res) => {
   );
 });
 
-server.listen(8000);
+
+server.listen(5000, () => {
+    console.log("Server listening http://localhost:5000");
+    
+});
 
